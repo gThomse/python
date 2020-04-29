@@ -1,0 +1,82 @@
+import os
+from xml.etree import ElementTree as ET
+file_name = 'rss-cb-exchange-rates.xml'
+
+class BoundaryException(ValueError):
+    pass
+
+def outofBounds(ch):
+    raise BoundaryException(ch)
+
+def line_no(no):
+    local_no = no
+    print(f'line no is {local_no}')
+    local_no += 1
+    return(local_no)
+
+mytree = ET.parse(file_name)
+myroot = mytree.getroot()
+
+# Development code ****
+#
+# line = 0
+# line = line_no(1)
+#
+# print ('My root : ', myroot)                  # Prints the address of root in memory
+# line = line_no(line)
+#
+# print ('My Root Tag : ', myroot.tag)          # Prints the Tag of root
+# line = line_no(line)
+ch = 0
+# line = line_no(line)
+
+# print('Printing out all the tags\n')
+
+while True:
+    try:
+        lst = (myroot[ch].tag).split("}")
+        if lst[1] == 'item':
+            #print (lst, ': ', lst[1], ':', type(lst), '  **********')
+            elem_01 = myroot[ch]
+            for e in elem_01:
+                if str((e)).split('}')[1].split("'")[0] == 'title':
+                    exe_rate = e.text.split(' ')
+                    # print(ch, ': ', exe_rate)
+                    for_curr_v = exe_rate[1]
+                    for_cty = exe_rate[2]
+                    lcl_curr = exe_rate[4]
+                    lcl_cty = exe_rate[5]
+            print (f'{lcl_curr} {lcl_cty} Dollar = {for_curr_v} {for_cty} ')
+            # print (ch, type(elem_01.attrib))
+        ch += 1
+    except:
+        print('Child index out of range', ch)
+        # break
+        raise outofBounds(ch)
+
+print ('Trying to look for children')
+
+# root_minus_1 = myroot.getchildren()
+# #
+# # item_root = myroot[ch].findall('item')
+# # print (item_root)
+# # line = line_no(line)
+# # print (item_root.tag)
+# # line = line_no(line)
+# # print (item_root.text)
+# # line = line_no(line)
+#
+
+#
+# cnt = 0
+# while True:
+#     try:
+#         print (f'Counter is {cnt}')
+#         print(myroot[cnt].tag)
+#         # ch = myroot[cnt].find('subj')
+#         print(ch.tag, '*', ch.attrib, '*', ch.text)
+#         cnt += 1
+#     except:
+#         break
+#     finally:
+#         print ('Bye')
