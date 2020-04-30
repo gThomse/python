@@ -25,7 +25,7 @@ targetC = myroot[2][6][3][3].text
 
 # print (dateEx_l[0], baseC, valC, targetC )
 
-for i in range(40):
+for i in range(2,40):
     try:
         # print (i, myroot[i].tag)
         dateEx = myroot[i][3].text
