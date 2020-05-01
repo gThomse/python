@@ -1,6 +1,7 @@
 import os
 import pyodbc
 import requests
+import datetime
 from xml.etree import ElementTree as ET
 
 class Error (Exception):
@@ -43,34 +44,48 @@ def main(file_text_as_string):
 
 
 if __name__ == '__main__' :
-    file_name = 'rss-cb-exchange-rates.xml'
 
+    # Look for the database first before proceeding
+    try:
+        path_db = os.path.abspath("RBA ExchRatesHistory.accdb")
+        print(path_db)
 
+        obdc_connection = "r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=" + path_db
+        ##print (obdc_connection)
+        conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=' + path_db)
+        # ##conn = pyodbc.connect(obdc_connection)
+        cursor = conn.cursor()
+        cursor.execute('SELECT Rate_Date, [Base Currency], ExchangeRate, [Foreign Currency] FROM [Rate History]')
 
-    # url_file_name = 'https://www.rba.gov.au/rss/rss-cb-exchange-rates.xml'
-    # page = requests.get(url_file_name)
+        strMaxDate = "SELECT Max(CDate([Rate_Date])) FROM [Rate History];"
+        cursor.execute(strMaxDate)
 
-    path_db = os.path.abspath("RBA ExchRatesHistory.accdb")
-    print(path_db)
+        # Retrieve last 'Max Date' from DB
+        for row in cursor.fetchall():
+            accessMaxDate = str(row[0]).split(' ')[0]
+            print(accessMaxDate)
 
-    obdc_connection = "r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=" + path_db
-    ##print (obdc_connection)
-    conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=' + path_db)
-    # ##conn = pyodbc.connect(obdc_connection)
-    cursor = conn.cursor()
-    cursor.execute('SELECT Rate_Date, [Base Currency], ExchangeRate, [Foreign Currency] FROM [Rate History]')
+        now = datetime.datetime.now()
+        print(now.year)
+        # Insert Date test here so Program doesn't proceed if accessMaxDate == Today
 
-    strInput = "INSERT INTO [Rate History] ( Rate_Date, [Base Currency], ExchangeRate, [Foreign Currency]) "
-    strInput = strInput + " SELECT '1.12.2010' AS Expr1, 'AUS' AS Expr2, 2 AS Expr3, 'FOR' AS Expr4;"
+        try:
 
-    print("strInput = ", strInput)
+            # Then look for the RBA rate XML file...
+            # file_name = 'rss-cb-exchange-rates.xml'  # This line used when testing was local. .. :)
+
+            url_file_name = 'https://www.rba.gov.au/rss/rss-cb-exchange-rates.xml'
+            # page = requests.get(url_file_name)
+        except:
+            print ()
+
+    except:
+        print()
 
 # SELECT "1.12.2010" AS Expr1, "AUS" AS Expr2, 2 AS Expr3, "FOR" AS Expr4;"
 #     cursor.execute('INSERT INTO [Rate History] ( Rate_Date, [Base Currency], ExchangeRate, [Foreign Currency])
 # SELECT "1.12.2010" AS Expr1, "AUS" AS Expr2, 2 AS Expr3, "FOR" AS Expr4;)
     #
-    for row in cursor.fetchall():
-        print(row)
 
     # main(page.text)
 
@@ -78,5 +93,13 @@ if __name__ == '__main__' :
 # SELECT "1.12.2010" AS Expr1, "AUS" AS Expr2, 2 AS Expr3, "FOR" AS Expr4;
 
 
+    strInput = "INSERT INTO [Rate History] ( Rate_Date, [Base Currency], ExchangeRate, [Foreign Currency]) "
+    strInput = strInput + " SELECT '1.12.2010' AS Expr1, 'AUS' AS Expr2, 2 AS Expr3, 'FOR' AS Expr4;"
+
+    print("strInput = ", strInput)
+
+
   # else:
   #   print ('Doing nothing')
+    conn.commit()
+    conn.close()
