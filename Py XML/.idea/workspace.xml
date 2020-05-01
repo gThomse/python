@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2265bee2-0e9d-4a83-a021-db36b53c1494" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/RBA ExchRatesHistory.accdb" beforeDir="false" afterPath="$PROJECT_DIR$/RBA ExchRatesHistory.accdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RBA ExchRatesHistory.laccdb" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1bEyi3ic9hbMalB1KrOic3E8PWq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+  </component>
+  <component name="RunManager" selected="Python.RBA 4">
+    <configuration name="Insert_MSaccdb" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Py XML" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Insert_MSaccdb.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="RBA 03" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Py XML" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RBA 03.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="RBA 05" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Py XML" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RBA 05.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="RBA 4" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Py XML" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RBA 4.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.RBA 05" />
+        <item itemvalue="Python.Insert_MSaccdb" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2265bee2-0e9d-4a83-a021-db36b53c1494" name="Default Changelist" comment="" />
+      <created>1588211670341</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588211670341</updated>
+    </task>
+    <task id="LOCAL-00001" summary="House keeping (hope this commit is correct)">
+      <created>1588211830364</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588211830364</updated>
+    </task>
+    <task id="LOCAL-00002" summary="House keeping (hope this commit is correct)">
+      <created>1588213353268</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1588213353268</updated>
+    </task>
+    <task id="LOCAL-00003" summary="House keeping (hope this commit is correct)">
+      <created>1588237665686</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1588237665686</updated>
+    </task>
+    <task id="LOCAL-00004" summary="House keeping (hope this commit is correct)">
+      <created>1588245220423</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1588245220423</updated>
+    </task>
+    <task id="LOCAL-00005" summary="House keeping (hope this commit is correct)">
+      <created>1588313687774</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1588313687774</updated>
+    </task>
+    <task id="LOCAL-00006" summary="House keeping (hope this commit is correct)">
+      <created>1588315257601</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1588315257601</updated>
+    </task>
+    <task id="LOCAL-00007" summary="House keeping (hope this commit is correct)">
+      <created>1588315346799</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1588315346799</updated>
+    </task>
+    <task id="LOCAL-00008" summary="House keeping (hope this commit is correct)">
+      <created>1588318455005</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1588318455005</updated>
+    </task>
+    <task id="LOCAL-00009" summary="House keeping (hope this commit is correct)">
+      <created>1588318610001</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1588318610001</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="House keeping (hope this commit is correct)" />
+    <option name="LAST_COMMIT_MESSAGE" value="House keeping (hope this commit is correct)" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="254" y="104" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588211849726">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state x="254" y="104" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.900@0.0.1600.900" timestamp="1588211849726" />
+    <state x="424" y="18" width="1176" height="864" key="CommitChangelistDialog2" timestamp="1588318609068">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state x="424" y="18" width="1176" height="864" key="CommitChangelistDialog2/0.0.1600.900@0.0.1600.900" timestamp="1588318609068" />
+    <state width="1579" height="235" key="GridCell.Tab.0.bottom" timestamp="1588318624640">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state width="1579" height="235" key="GridCell.Tab.0.bottom/0.0.1600.900@0.0.1600.900" timestamp="1588318624640" />
+    <state width="1579" height="235" key="GridCell.Tab.0.center" timestamp="1588318624640">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state width="1579" height="235" key="GridCell.Tab.0.center/0.0.1600.900@0.0.1600.900" timestamp="1588318624640" />
+    <state width="1579" height="235" key="GridCell.Tab.0.left" timestamp="1588318624640">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state width="1579" height="235" key="GridCell.Tab.0.left/0.0.1600.900@0.0.1600.900" timestamp="1588318624640" />
+    <state width="1579" height="235" key="GridCell.Tab.0.right" timestamp="1588318624640">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state width="1579" height="235" key="GridCell.Tab.0.right/0.0.1600.900@0.0.1600.900" timestamp="1588318624640" />
+  </component>
+</project>
