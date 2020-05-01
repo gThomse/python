@@ -24,7 +24,7 @@ for row in cursor.fetchall():
     print(accessMaxDate)
 
 now = datetime.datetime.now()
-print(now.year)
+print(f'Now : "{now.year}"')
 # Insert Date test here so Program doesn't proceed if accessMaxDate == Today
 
 
@@ -32,7 +32,7 @@ print(now.year)
 # SELECT "1.12.2010" AS Expr1, "AUS" AS Expr2, 2 AS Expr3, "FOR" AS Expr4;
 
 dateEntered = input("Provide a date in dd/mm/yyyy format please? ")
-
+# Needs some error checking here...
 print ('<'+dateEntered+'>')
 
 strInput = "INSERT INTO [Rate History] ( Rate_Date, [Base Currency], ExchangeRate, [Foreign Currency]) "

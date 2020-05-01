@@ -37,7 +37,13 @@ def main(file_text_as_string):
             targetC = myroot[i][6][3][3].text  # Target Country Abbreviation
 
             print(f'On the {dateEx_l[0]}: $1 {baseC}  = {valC} {targetC}')
+            strUpdate = "INSERT INTO [Rate History] ( Rate_Date, [Base Currency], ExchangeRate, [Foreign Currency]) "
+            strUpdate = strUpdate + " SELECT '" + dateEx_l[0] + "' AS Expr1, " + baseC
+            strUpdate = " AS Expr2, " + valC + " AS Expr3, " + targetC + " AS Expr4;"
 
+            # Writing to local DB
+            cursor.execute(strUpdate)
+            conn.commit()
         except:
             print ('.', end='')
 
@@ -47,16 +53,14 @@ if __name__ == '__main__' :
 
     # Look for the database first before proceeding
     try:
+        # Return absolute path for file :
         path_db = os.path.abspath("RBA ExchRatesHistory.accdb")
         print(path_db)
 
-        obdc_connection = "r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=" + path_db
-        ##print (obdc_connection)
+        # Set up Access Connection:
         conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=' + path_db)
-        # ##conn = pyodbc.connect(obdc_connection)
         cursor = conn.cursor()
-        cursor.execute('SELECT Rate_Date, [Base Currency], ExchangeRate, [Foreign Currency] FROM [Rate History]')
-
+        # Check date isn't today
         strMaxDate = "SELECT Max(CDate([Rate_Date])) FROM [Rate History];"
         cursor.execute(strMaxDate)
 
@@ -65,41 +69,28 @@ if __name__ == '__main__' :
             accessMaxDate = str(row[0]).split(' ')[0]
             print(accessMaxDate)
 
-        now = datetime.datetime.now()
-        print(now.year)
-        # Insert Date test here so Program doesn't proceed if accessMaxDate == Today
+        l_date = str(datetime.datetime.now()),split(' ')[0]
+        print(l_date, ' ***')
+        if l_date > accessMaxDate:
+            try:
+                print ('Dates ok')
+                # New date so new data should be available...
+                # Then look for the RBA rate XML file...
+                # file_name = 'rss-cb-exchange-rates.xml'  # This line used when testing was local. .. :)
 
-        try:
+                url_file_name = 'https://www.rba.gov.au/rss/rss-cb-exchange-rates.xml'
+                page = requests.get(url_file_name)
+                main(page.text)
 
-            # Then look for the RBA rate XML file...
-            # file_name = 'rss-cb-exchange-rates.xml'  # This line used when testing was local. .. :)
 
-            url_file_name = 'https://www.rba.gov.au/rss/rss-cb-exchange-rates.xml'
-            # page = requests.get(url_file_name)
-        except:
-            print ()
-
+            except:
+                print ('Issues detected retrieving the file... \nPlease check the link\n{url_file_name}\n\nHave a nice day')
+        else:
+            print ('Looks like the data has already been loaded\nHave a nice day')
     except:
         print()
 
-# SELECT "1.12.2010" AS Expr1, "AUS" AS Expr2, 2 AS Expr3, "FOR" AS Expr4;"
-#     cursor.execute('INSERT INTO [Rate History] ( Rate_Date, [Base Currency], ExchangeRate, [Foreign Currency])
-# SELECT "1.12.2010" AS Expr1, "AUS" AS Expr2, 2 AS Expr3, "FOR" AS Expr4;)
-    #
 
-    # main(page.text)
+    # Closing the database..
 
-# INSERT INTO [Rate History] ( Rate_Date, [Base Currency], ExchangeRate, [Foreign Currency] )
-# SELECT "1.12.2010" AS Expr1, "AUS" AS Expr2, 2 AS Expr3, "FOR" AS Expr4;
-
-
-    strInput = "INSERT INTO [Rate History] ( Rate_Date, [Base Currency], ExchangeRate, [Foreign Currency]) "
-    strInput = strInput + " SELECT '1.12.2010' AS Expr1, 'AUS' AS Expr2, 2 AS Expr3, 'FOR' AS Expr4;"
-
-    print("strInput = ", strInput)
-
-
-  # else:
-  #   print ('Doing nothing')
-    conn.commit()
     conn.close()
