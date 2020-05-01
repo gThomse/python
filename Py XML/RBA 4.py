@@ -39,8 +39,6 @@ def main(file_text_as_string):
         except:
             print ('.', end='')
 
-
-
 if __name__ == '__main__' :
     file_name = 'rss-cb-exchange-rates.xml'
 
