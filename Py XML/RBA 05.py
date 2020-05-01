@@ -68,9 +68,10 @@ if __name__ == '__main__' :
         for row in cursor.fetchall():
             accessMaxDate = str(row[0]).split(' ')[0]
             print(accessMaxDate)
+            print('In for look to retrieve data..')
 
-        l_date = str(datetime.datetime.now()),split(' ')[0]
-        print(l_date, ' ***')
+        l_date = str(datetime.datetime.now()).split(' ')[0]
+
         if l_date > accessMaxDate:
             try:
                 print ('Dates ok')
