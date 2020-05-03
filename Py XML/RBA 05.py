@@ -96,7 +96,7 @@ if __name__ == '__main__' :
         # print (accessMaxDate, ' Now date is: ', l_date)
 
         #quit()
-
+        print(path_db)
         if l_date > accessMaxDate:
             try:
                 print ('Dates ok')
